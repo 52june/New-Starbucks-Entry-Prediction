@@ -1,2 +1,17 @@
 # New-Starbucks-Entry-Prediction
-Data analysis for predicting new entry of Starbucks
+서울시 내 스타벅스 입점 분석 및 다음 위치 예측 (2017.04 ~ 2017.06)
+
+상주 인구, 집객 시설, 상권에 대한 지수지표, 주변 상권, 유동인구 수 및 직장 인구 수와 같은 상권에 대한 데이터와 스타벅스의 위치를 매칭하여 스타벅스가 입점되어 있는 상권에 대해서 분석하며 아직 스타벅스가 입점되지 않은 곳 중에 입점 확률이 높은 곳을 예측 
+
+두 번에 걸친 분석과 발표 진행
+
+#### Part 1
+- 데이터 소개와 시각화를 통한 탐색적 데이터 분석
+- 각 행정동별 스타벅스 입점 개수를 반응변수로 하여 Linear Regression, Possion Regression, Regression Tree, Random Forest을 수행하여 스타벅스의 입점에 영향에 주는 변수를 선택하고 입점 후보군 행정동 예측
+- 행정동만을 기준으로 하기에는 지나치게 포괄적인 한계점
+- 행정동이 아닌 골목 상권으로 나누어 다시 분석 진행
+
+#### Part 2
+- 각 스타벅의 위,경도와 가장 가까운 골목 상권을 매칭
+- 상권별 스타벅스의 입점 여부를 반응변수로 하여 Logistic Regression, Support Vector Machine, Generalized Additive Model 등 다양한 모형을 활용하여 예측 (최종 모형 AUC = 0.819, CV error = 0.25)
+- 스타벅스가 입점되어 있지 않은 상권 중에서 입점 확률이 높은 상권 선택
